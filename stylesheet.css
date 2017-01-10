@@ -1,0 +1,190 @@
+html {
+	font-size: 16px;
+}
+body {
+	background-color: #FBB13C;
+}
+.well {
+	background: url(bg.png) center repeat repeat;
+	margin-bottom: 20px;
+}
+.man {
+	background-color: #c4dafd;
+}
+.control {
+	margin-top: 2%;
+}
+h2 {
+	color: white;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-shadow: 2px 2px 4px #000;
+}
+.action {
+	margin-bottom: 40px;
+}
+.well {
+	margin-left: auto;
+	margin-right: auto;
+}
+button {
+	margin-left: auto;
+	margin-right: auto;
+}
+.btn {
+	display: block;
+}
+.logo {
+	width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*keyframes*/
+@-webkit-keyframes slide {
+	0% { transform: translate(0px, 0px); }
+	50% { transform: translate(20px, 0px); }
+	100% { transform: translate(0px, 0px);}
+}
+@-webkit-keyframes round {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(90deg); }
+	100% { transform: rotate(0deg);}
+}
+@-webkit-keyframes round180 {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(180deg); }
+	100% { transform: rotate(0deg);}
+}
+@-webkit-keyframes raiseArm {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(-85deg); }
+	100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes float {
+	0% { transform: translate(0px, 0px); }
+	50% { transform: translate(0px, -50px); }
+	100% { transform: translate(0px, 0px); }
+}
+@-webkit-keyframes raiseLeg {
+	0% { transform: rotate(0deg); }
+	50% { transform: rotate(50deg); }
+	100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes dance {
+	0% { transform: rotate(0deg); }
+	10% { transform: rotate(20deg);}
+	20% { transform: skewX(20deg); }
+	30% { transform: rotate(40deg); }
+	40% { transform: skewY(5deg); }
+	50% { transform: rotateY(50deg); }
+	60% { transform: skewY(5deg); }
+	70% { transform: rotate(-40deg); }
+	80% { transform: skewX(-15deg); }
+	90% { transform: rotate(-20deg);}
+	100% { transform: rotate(0deg); }
+}
+@-webkit-keyframes spin {
+	0% { transform: rotateY(0deg); }
+	50% { transform: rotateY(360deg); }
+	100% { transform: rotateY(0deg); }
+}
+@-webkit-keyframes move {
+	0% { transform: translate(0px, 0px); }
+	25% { transform: translate(5px, -5px); }
+	50% { transform: rotateY(360deg); }
+	75% { transform: translate(5px, -5px); }
+	100% { transform: translate(0px, 0px); }
+}
+@-webkit-keyframes color {
+	0% { background-color: white; }
+	25% { background-color: #ff0000; }
+	50% { background-color: #00ff00; }
+	75% { background-color: #0000ff; }
+	100% { background-color: white; }
+}
+@-webkit-keyframes jump {
+	0% { transform: translate(0px, 0px) }
+	50% { transform: translate(0px, -70px) }
+	100% { transform: translate(0px, 0px)}
+}
+@-webkit-keyframes rollEye {
+	0% { transform: translate(0px, 0px) }
+	50% { transform: translate(2px, -4px) }
+	100% { transform: translate(0px, 0px)}
+}
+
+/*animation classes*/
+.wave {
+	-webkit-animation: raiseArm 2s cubic-bezier(0.68,-0.55, 0.1, 1.62) infinite;
+	transform-origin: 3% 0%;
+}
+.headUp {
+	-webkit-animation: float 1s cubic-bezier(0, 1.28, 0.86, 1) infinite;
+}
+.kick {
+	-webkit-animation: raiseLeg 1s ease-in-out infinite;
+	transform-origin: top right;
+}
+.right-arm-dance {
+	-webkit-animation: dance 5s cubic-bezier(0.05, 1.24, 0.12, 2.04) infinite;
+	transform-origin: top left;
+}
+.left-arm-dance {
+	-webkit-animation: dance 5s cubic-bezier(0.05, 1.24, 0.12, 2.04) infinite;
+	transform-origin: top right;	
+}
+.right-leg-dance {
+	-webkit-animation: dance 5s cubic-bezier(0.05, 1.24, 0.12, 2.04) 1s infinite;
+	transform-origin: top left;
+}
+.left-leg-dance {
+	-webkit-animation: dance 5s cubic-bezier(0.05, 1.24, 0.12, 2.04) 1s infinite;
+	transform-origin: top right;	
+}
+.spinning {
+	-webkit-animation: spin 3s cubic-bezier(0, 1.28, 0.86, 1) 2s infinite;
+	transform-origin: center center;
+}
+.headMove {
+	-webkit-animation: move 1s ease-in-out infinite;
+}
+.rgb {
+	-webkit-animation: color 2s cubic-bezier(0.41,-0.01, 1, 1) infinite;
+}
+.jumper {
+	-webkit-animation: jump 0.5s cubic-bezier(0.26, 1.78, 0.6, 1.83) infinite;
+	transform-origin: 50% 0%;
+}
+.eyesRoll {
+	-webkit-animation: rollEye 4s cubic-bezier(0.03, 1.62, 0.99, 1.18) infinite;
+}
+.oSlide {
+	-webkit-animation: slide 3s ease-in-out 1, round 3s ease-in-out 1;
+	transform-origin: top left;
+}
+.exclamationUpDown {
+	-webkit-animation: round180 3s ease-in-out 1;
+	transform-origin: center center;
+}
+
+/*media queries*/
+@media (min-width: 768px) and (max-width: 990px) {
+	.btn-group-lg>.btn, .btn-lg {
+		padding: 0.75em;
+		font-size: 1.5em;
+		width: 6em;
+	}
+}
+@media (min-width: 320px) and (max-width: 390px) {
+	.btn-group-lg>.btn, .btn-lg {
+		padding: 0.5em;
+		font-size: 1em;
+	}
+	h2 {
+		font-size: 1.5em;
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
+		margin: 0.2em 0;
+	}
+}
